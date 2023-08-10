@@ -23,8 +23,11 @@ namespace MyOrganization
          * 
          * @param person
          * @param title
-         * @return the newly filled position or empty if no position has that title
-         */
+         * @return the newly filled position or empty if no position has that title 
+         */ 
+
+        // I know the description says to return empty, so we could return an empty object, however returning
+        // an empty object implies that data has been returned, so I think returning null is a better practice
         public Position? Hire(Name person, string title)
         {
             //your code here
@@ -34,9 +37,9 @@ namespace MyOrganization
                 return null;
             }
             
-            var emplyee = new Employee(_newEmployeeId, person);
+            var employee = new Employee(_newEmployeeId, person);
             _newEmployeeId++;
-            pos.SetEmployee(emplyee);
+            pos.SetEmployee(employee);
 
             return pos;
 
